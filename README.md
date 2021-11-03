@@ -1,10 +1,14 @@
 
-# slugify
+# slugify-persian
 
 [![npm-version]][npm] [![travis-ci]][travis] [![coveralls-status]][coveralls]
 
+This package is a fork of [simov/slugify](https://github.com/simov/slugify), that doesn't turn persian characters into anything else, for instance:
+given `مطلب تستی من 💯`, you will get `مطلب-تستی-من` instead of getting `mtlb-tsty-mn`.
+
+
 ```js
-var slugify = require('slugify')
+var slugify = require('slugify-persian')
 
 slugify('some string') // some-string
 
@@ -59,8 +63,8 @@ slugify('unicode ♥ is ☢') // unicode-love-is-radioactive
 Keep in mind that the `extend` method extends/overrides the default `charMap` for the entire process. In case you need a fresh instance of the slugify's `charMap` object you have to clean up the module cache first:
 
 ```js
-delete require.cache[require.resolve('slugify')]
-var slugify = require('slugify')
+delete require.cache[require.resolve('slugify-persian')]
+var slugify = require('slugify-persian')
 ```
 
 ## Contribute
