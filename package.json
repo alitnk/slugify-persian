@@ -1,6 +1,6 @@
 {
   "name": "slugify-persian",
-  "version": "1.6.1",
+  "version": "1.0.1",
   "description": "Slugifies a string with persian characters, useful for URLs",
   "keywords": [
     "slugify",
