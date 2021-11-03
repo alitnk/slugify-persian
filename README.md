@@ -1,6 +1,9 @@
 
 # slugify
 
+This package is a fork of [simov/slugify](https://github.com/simov/slugify), that doesn't turn persian characters to anything else, for instance:
+given `مطلب تستی من 💯`, you will get `مطلب-تستی-من` instead of getting `mtlb-tsty-mn`.
+
 [![npm-version]][npm] [![travis-ci]][travis] [![coveralls-status]][coveralls]
 
 ```js
