@@ -265,4 +265,22 @@ describe('slugify', () => {
   it('should preserve leading/trailing replacement characters if option set', function () {
     t.equal(slugify(' foo bar baz ', { trim: false }), '-foo-bar-baz-')
   })
+
+  it('custom behaviour for this fork: should not remove persian characters', () => {
+    var alphabet =
+      'متن تستی که خیلی طولانی هستش '
+
+    t.equal(slugify(alphabet),
+      'متن-تستی-که-خیلی-طولانی-هستش'
+    )
+  })
+
+  it('custom behaviour for this fork: should not remove persian characters - strict mode', () => {
+    var alphabet =
+      'متن تستی که خیلی طولانی هستش... بله '
+
+    t.equal(slugify(alphabet, { strict: true }),
+      'متن-تستی-که-خیلی-طولانی-هستش-بله'
+    )
+  })
 })
